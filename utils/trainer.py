@@ -294,8 +294,22 @@ class Trainer(BaseModel):
         if self.run:
             self.run.log({"val_acc": acc, "val_ap": ap , "val_precision": precision})
             self.run.log({"N_FAKE": N_FAKE, "N_REAL": N_REAL})
+        # True Positives
+        TP = np.sum((y_true == 1) & (y_pred > 0.5))
+        # True Negatives
+        TN = np.sum((y_true == 0) & (y_pred <= 0.5))
+        # False Positives
+        FP = np.sum((y_true == 0) & (y_pred > 0.5))
+        # False Negatives
+        FN = np.sum((y_true == 1) & (y_pred <= 0.5))
         print(f"Validation: acc: {acc}, ap: {ap}, precision: {precision}")
         print(f"N_FAKE: {N_FAKE}, N_REAL: {N_REAL}")
+        print(f'RESULT: ##{self.cfg.dataset_test_root}_#_TP_#_{TP}##')
+        print(f'RESULT: ##{self.cfg.dataset_test_root}_#_FP_#_{FP}##')
+        print(f'RESULT: ##{self.cfg.dataset_test_root}_#_FN_#_{FN}##')
+        print(f'RESULT: ##{self.cfg.dataset_test_root}_#_TN_#_{TN}##')
+        print(
+            f'RESULT: ##{self.cfg.dataset_test_root}_#_acc_#_{acc}##, ##{self.cfg.dataset_test_root}_#_ap_#_{ap}##, precision:{precision}')
         if save:
             with open(save_name, "w") as f:
                 f.write(f"Validation: acc: {acc}, ap: {ap}, precision: {precision}\n")
