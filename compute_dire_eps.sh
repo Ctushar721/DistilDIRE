@@ -6,7 +6,7 @@ MODEL_PATH="/content/drive/MyDrive/DistilDire/AdmModel/256x256_diffusion_uncond.
 SAMPLE_FLAGS="--batch_size 32" # ddim20 is forced
 PREPROCESS_FLAGS="--compute_dire True --compute_eps True"
 
-for i in 0 1 2 3 4 5
+for i in 0
 do
     SAVE_FLAGS="--data_root ${DATA_ROOT[$i]} --save_root ${SAVE_ROOT[$i]}"
     echo "Running on ${DATA_ROOT[$i]} with save root ${SAVE_ROOT[$i]}"
