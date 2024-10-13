@@ -1,6 +1,6 @@
 ## set MODEL_PATH, num_samples, has_subfolder, images_dir, recons_dir, dire_dir
-DATA_ROOT=("/content/drive/MyDrive/DistilDire/dataset/dalle3_males" "/content/drive/MyDrive/DistilDire/dataset/dalle3_females" "/content/drive/MyDrive/DistilDire/dataset/midjourney_males" "/content/drive/MyDrive/DistilDire/dataset/midjourney_females" "/content/drive/MyDrive/DistilDire/dataset/sd1_males" "/content/drive/MyDrive/DistilDire/dataset/sd1_females")
-SAVE_ROOT=("/content/drive/MyDrive/DistilDire/dataset/dalle3_males" "/content/drive/MyDrive/DistilDire/dataset/dalle3_females" "/content/drive/MyDrive/DistilDire/dataset/midjourney_males" "/content/drive/MyDrive/DistilDire/dataset/midjourney_females" "/content/drive/MyDrive/DistilDire/dataset/sd1_males" "/content/drive/MyDrive/DistilDire/dataset/sd1_females")
+DATA_ROOT=("/content/drive/MyDrive/DistilDire/dataset/dalle3_male" "/content/drive/MyDrive/DistilDire/dataset/dalle3_female" "/content/drive/MyDrive/DistilDire/dataset/midjourney_male" "/content/drive/MyDrive/DistilDire/dataset/midjourney_female" "/content/drive/MyDrive/DistilDire/dataset/sd1_male" "/content/drive/MyDrive/DistilDire/dataset/sd1_female")
+SAVE_ROOT=("/content/drive/MyDrive/DistilDire/dataset/dalle3_male" "/content/drive/MyDrive/DistilDire/dataset/dalle3_female" "/content/drive/MyDrive/DistilDire/dataset/midjourney_male" "/content/drive/MyDrive/DistilDire/dataset/midjourney_female" "/content/drive/MyDrive/DistilDire/dataset/sd1_male" "/content/drive/MyDrive/DistilDire/dataset/sd1_female")
 
 MODEL_PATH="/content/drive/MyDrive/DistilDire/AdmModel/256x256_diffusion_uncond.pt" # imagenet pretrained adm (unconditional, 512x512)
 SAMPLE_FLAGS="--batch_size 32" # ddim20 is forced
