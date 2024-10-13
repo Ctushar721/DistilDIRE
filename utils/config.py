@@ -42,9 +42,9 @@ class DefaultConfigs(ABC):
     pretrained = True
 
     # paths information
-    root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-    dataset_root = os.path.join(root_dir, "datasets")
-    dataset_test_root = os.path.join(root_dir, "datasets")
+    root_dir = ""
+    dataset_root = ""
+    dataset_test_root = ""
     exp_root = os.path.join(root_dir, "experiments")
     _exp_name = ""
     exp_dir = ""
@@ -162,7 +162,7 @@ cfg.pretrained_weights = args.pretrained_weights
 cfg.lr = args.lr
 cfg.nepoch = args.epoch
 
-root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+root_dir = args.root_dir
 cfg.dataset_root = os.path.join(root_dir, 'datasets', cfg.datasets)
 if args.dataset_root != "":
     cfg.dataset_root = args.dataset_root
