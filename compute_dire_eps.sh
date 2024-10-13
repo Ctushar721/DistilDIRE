@@ -2,7 +2,7 @@
 DATA_ROOT=("/content/drive/MyDrive/DistilDire/dalle3_males")
 SAVE_ROOT=("/content/drive/MyDrive/DistilDire/dalle3_males")
 
-MODEL_PATH="/content/drive/MyDrive/DistilDire/256x256_diffusion_uncond.pt" # imagenet pretrained adm (unconditional, 512x512)
+MODEL_PATH="/content/drive/MyDrive/DistilDire/AdmModel/256x256_diffusion_uncond.pt" # imagenet pretrained adm (unconditional, 512x512)
 SAMPLE_FLAGS="--batch_size 32" # ddim20 is forced
 PREPROCESS_FLAGS="--compute_dire True --compute_eps True"
 
