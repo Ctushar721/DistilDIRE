@@ -3,6 +3,7 @@ from utils.config import cfg
 
     
 def main(run, cfg):
+    print("cfg", cfg)
     from utils.trainer import Trainer
     from torch.utils.data import DataLoader
     from dataset import TMEPSOnlyDataset, TMIMGOnlyDataset
