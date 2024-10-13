@@ -257,7 +257,8 @@ if __name__ == "__main__":
                 img_path = osp.join(adm_args['save_root'], 'images', 'fakes', basename) if isfake else osp.join(adm_args['save_root'], 'images', 'reals', basename)
                 dire_path = img_path.replace('/images/', '/dire/')
                 eps_path = img_path.replace('/images/', '/eps/').split('.')[0] + '.pt'
-                
+                print('dire_path', dire_path)
+                print('img_path', img_path)
                 if not osp.exists(img_path):
                     torchvision.utils.save_image(img[i], img_path)
                 if not osp.exists(dire_path) and adm_args['compute_dire']:
