@@ -11,8 +11,8 @@ def main(run, cfg):
     # dataset =TMEPSOnlyDataset(cfg.dataset_test_root, False)
     dataset = TMIMGOnlyDataset(cfg.dataset_test_root, istrain=False)
     dataloader = DataLoader(dataset, 
-                            batch_size=100,
-                            shuffle=True, num_workers=2)
+                            batch_size=100)
+    # shuffle=True, num_workers=2
     print("Dataloader done")
     trainer = Trainer(cfg, dataloader, dataloader, run, 0, False, 1)
     assert len(cfg.pretrained_weights) != 0, "Give proper checkpoint path"
