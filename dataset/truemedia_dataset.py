@@ -84,7 +84,7 @@ class TMIMGOnlyDataset(TMDistilDireDataset):
         self.istrain=istrain
 
     def __getitem__(self, idx):
-       
+        print("Get item called")
         img_path, dire_path, eps_path, isfake = self.img_paths[idx]
         img = Image.open(img_path).convert('RGB')
         img = self.transform(img)
